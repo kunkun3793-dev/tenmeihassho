@@ -28,9 +28,9 @@ label{display:block;font-size:12px;color:#888;margin-bottom:8px;}
 .god-type{font-size:12px;color:#999;margin-bottom:6px;}
 .god-theme{font-size:14px;color:#555;line-height:1.7;}
 .soul-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px;}
-.soul-card{background:#f8f7f4;border-radius:10px;padding:12px;text-align:center;}
-.soul-l{font-size:10px;color:#aaa;margin-bottom:4px;}
-.soul-v{font-size:13px;font-weight:500;color:#1a1a1a;}
+.soul-card{background:#f5f3ef;border:0.5px solid #d8d4ce;border-radius:10px;padding:14px 10px;text-align:center;}
+.soul-l{font-size:11px;color:#555;margin-bottom:4px;font-weight:500;}
+.soul-v{font-size:14px;font-weight:500;color:#111111;}
 .sec{margin-bottom:14px;}
 .sec-title{font-size:11px;color:#aaa;border-bottom:0.5px solid #eee;padding-bottom:4px;margin-bottom:10px;letter-spacing:0.07em;}
 .sec-body{font-size:14px;color:#333;line-height:1.9;}
@@ -45,18 +45,28 @@ label{display:block;font-size:12px;color:#888;margin-bottom:8px;}
 .zure-item{display:flex;gap:8px;align-items:flex-start;margin-bottom:6px;font-size:14px;color:#333;line-height:1.6;}
 .zure-dot{width:4px;height:4px;border-radius:50%;background:#bbb;margin-top:8px;flex-shrink:0;}
 .zure-outro{font-size:13px;color:#555;line-height:1.8;}
-.continue-btn{display:block;width:100%;padding:14px;font-size:14px;font-weight:500;text-align:center;background:#fff;color:#1a1a1a;border:0.5px solid #ddd;border-radius:12px;text-decoration:none;margin-top:12px;cursor:pointer;}
-.continue-btn:hover{background:#f5f5f5;}
-.continue-arrow{font-size:12px;color:#aaa;text-align:center;margin-top:6px;}
-.cta-box{border:0.5px solid #e0ddd8;border-radius:12px;padding:14px;text-align:center;margin-bottom:14px;}
-.cta-main{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:4px;}
-.cta-sub{font-size:12px;color:#999;line-height:1.6;}
-.copy-btn{width:100%;height:48px;font-size:15px;font-weight:500;cursor:pointer;border:0.5px solid #ddd;border-radius:12px;background:#1a1a1a;color:#fff;margin-bottom:10px;}
-.copy-btn:active{transform:scale(0.98);}
+
+
+
+
+
+
+
+
 .copied{font-size:13px;color:#1D9E75;text-align:center;display:none;margin-top:6px;}
-.reset-btn{width:100%;height:44px;font-size:14px;cursor:pointer;border:0.5px solid #e0ddd8;border-radius:12px;background:#fff;color:#888;margin-top:4px;}
-.footer{font-size:11px;color:#ccc;text-align:center;margin-top:16px;line-height:1.7;}
-.credit{font-size:10px;color:#ddd;text-align:center;margin-top:8px;}
+.reset-btn{width:100%;height:44px;font-size:14px;cursor:pointer;border:0.5px solid #d8d4ce;border-radius:12px;background:#fff;color:#777;margin-top:4px;}
+.footer{font-size:11px;color:#999;text-align:center;margin-top:16px;line-height:1.8;}
+.credit{font-size:10px;color:#bbb;text-align:center;margin-top:6px;letter-spacing:0.1em;}
+.cta-card{background:#fff;border-radius:16px;border:1px solid #d8d4ce;padding:28px 24px;margin-bottom:12px;text-align:center;}
+.cta-label{font-size:11px;color:#aaa;letter-spacing:0.08em;margin-bottom:6px;}
+.cta-heading{font-size:20px;font-weight:500;color:#1a1a1a;margin-bottom:14px;}
+.cta-desc{font-size:14px;color:#555;line-height:1.9;margin-bottom:10px;text-align:left;}
+.cta-note{font-size:11px;color:#bbb;margin-bottom:18px;}
+.cta-action{display:block;width:100%;padding:16px;font-size:15px;font-weight:500;text-align:center;background:#1a1a1a;color:#fff;border-radius:12px;text-decoration:none;cursor:pointer;}
+.cta-action:active{transform:scale(0.98);}
+.sub-actions{margin-bottom:16px;}
+.copy-btn-sub{width:100%;height:44px;font-size:13px;cursor:pointer;border:0.5px solid #d8d4ce;border-radius:10px;background:#fff;color:#888;margin-top:8px;}
+.copy-btn-sub:hover{background:#f5f5f5;}
 </style>
 </head>
 <body>
@@ -124,19 +134,21 @@ label{display:block;font-size:12px;color:#888;margin-bottom:8px;}
         <div class="zure-item"><div class="zure-dot"></div><div id="r-z3"></div></div>
       </div>
       <div class="zure-outro">このズレが、人との距離感や理解の差を生みます。</div>
-      <a class="continue-btn" href="https://kunkun3793-dev.github.io/tenmeihassho/sample.html">続きを見る</a>
-      <div class="continue-arrow">なぜそうなるか・どうすればいいか</div>
     </div>
   </div>
 
-  <div class="card">
-    <div class="cta-box">
-      <div class="cta-main">もっと深く知りたい方へ　→　詳細鑑定（有料）</div>
-      <div class="cta-sub">全16ページ・8,500文字以上のボリュームで<br>恋愛・仕事・人間関係・運気の流れを、あなただけに読み解きます</div>
-    </div>
-    <button class="copy-btn" onclick="copyText()">コピーする（LINE・Instagram用）</button>
-    <div class="copied" id="copied">コピーしました！LINEやInstagramに貼り付けてください</div>
+  <div class="cta-card">
+    <div class="cta-label">もっと深く知りたい方へ</div>
+    <div class="cta-heading">詳細鑑定（有料）</div>
+    <div class="cta-desc">無料版では触れきれない「理由」と「活かし方」まで、<br>恋愛・仕事・人間関係・運気の流れに沿って、<br>あなただけに丁寧に読み解きます。</div>
+    <div class="cta-note">※全16ページ・8,500文字以上</div>
+    <a class="cta-action" href="https://lin.ee/XXXXXXX">詳しく読み解く</a>
+  </div>
+
+  <div class="sub-actions">
     <button class="reset-btn" onclick="reset()">もう一度診断する</button>
+    <button class="copy-btn-sub" onclick="copyText()">コピーする（LINE・Instagram用）</button>
+    <div class="copied" id="copied">コピーしました！</div>
   </div>
 
   <div class="footer">この診断は「天命八星」の象徴を通して本質・役割・流れを読み解いたものです。特定の守護神を断定するものではありません。</div>
