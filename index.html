@@ -38,11 +38,16 @@ label{display:block;font-size:12px;color:#888;margin-bottom:8px;}
 .mini{background:#f8f7f4;border-radius:10px;padding:10px;}
 .mini-l{font-size:10px;color:#aaa;margin-bottom:4px;}
 .mini-b{font-size:12px;color:#333;line-height:1.6;}
-.action-box{background:#f8f7f4;border-radius:10px;padding:12px 14px;margin-bottom:14px;}
-.a-row{display:flex;gap:10px;margin-bottom:7px;align-items:flex-start;}
-.a-row:last-child{margin-bottom:0;}
-.a-num{font-size:11px;color:#aaa;min-width:16px;margin-top:2px;}
-.a-txt{font-size:14px;color:#333;line-height:1.7;}
+.zure-box{background:#f8f7f4;border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.zure-title{font-size:15px;font-weight:500;color:#1a1a1a;margin-bottom:10px;line-height:1.5;}
+.zure-intro{font-size:13px;color:#555;line-height:1.8;margin-bottom:12px;}
+.zure-list{margin-bottom:12px;}
+.zure-item{display:flex;gap:8px;align-items:flex-start;margin-bottom:6px;font-size:14px;color:#333;line-height:1.6;}
+.zure-dot{width:4px;height:4px;border-radius:50%;background:#bbb;margin-top:8px;flex-shrink:0;}
+.zure-outro{font-size:13px;color:#555;line-height:1.8;}
+.continue-btn{display:block;width:100%;padding:14px;font-size:14px;font-weight:500;text-align:center;background:#fff;color:#1a1a1a;border:0.5px solid #ddd;border-radius:12px;text-decoration:none;margin-top:12px;cursor:pointer;}
+.continue-btn:hover{background:#f5f5f5;}
+.continue-arrow{font-size:12px;color:#aaa;text-align:center;margin-top:6px;}
 .cta-box{border:0.5px solid #e0ddd8;border-radius:12px;padding:14px;text-align:center;margin-bottom:14px;}
 .cta-main{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:4px;}
 .cta-sub{font-size:12px;color:#999;line-height:1.6;}
@@ -109,11 +114,18 @@ label{display:block;font-size:12px;color:#888;margin-bottom:8px;}
       <div class="mini"><div class="mini-l">仕事</div><div class="mini-b" id="r-work"></div></div>
       <div class="mini"><div class="mini-l">人間関係</div><div class="mini-b" id="r-rel"></div></div>
     </div>
-    <div class="sec-title" style="margin-bottom:12px;">あなたの力を引き出す3つのこと</div>
-    <div class="action-box">
-      <div class="a-row"><div class="a-num">①</div><div class="a-txt" id="r-a1"></div></div>
-      <div class="a-row"><div class="a-num">②</div><div class="a-txt" id="r-a2"></div></div>
-      <div class="a-row"><div class="a-num">③</div><div class="a-txt" id="r-a3"></div></div>
+
+    <div class="zure-box">
+      <div class="zure-title" id="r-zure-title"></div>
+      <div class="zure-intro">あなたが感じていた「なぜか伝わらない」という感覚は、あなたのせいではありません。<br>このタイプは、次の3つのズレを持っています。</div>
+      <div class="zure-list">
+        <div class="zure-item"><div class="zure-dot"></div><div id="r-z1"></div></div>
+        <div class="zure-item"><div class="zure-dot"></div><div id="r-z2"></div></div>
+        <div class="zure-item"><div class="zure-dot"></div><div id="r-z3"></div></div>
+      </div>
+      <div class="zure-outro">このズレが、人との距離感や理解の差を生みます。</div>
+      <a class="continue-btn" href="https://kunkun3793-dev.github.io/tenmeihassho/sample.html">続きを見る</a>
+      <div class="continue-arrow">なぜそうなるか・どうすればいいか</div>
     </div>
   </div>
 
@@ -153,7 +165,7 @@ const GOD_DATA={
   caution:'「なんでわかってくれないんだろう」と、静かに思った夜が、きっとあるはずです。一生懸命伝えようとするほど、なぜかうまく届かない。そういう経験を、何度も重ねてきたかもしれません。それは、あなたがおかしいのではありません。あなたが先に見えているから、起きることです。そういう時期もあります。大丈夫。',
   mission:'あなたがいると、何かが動き出す。それは偶然ではありません。新しい流れの、最初の火種になること。それが、あなたに与えられた役割です。',
   love:'魂の深い部分で通じ合える相手を、自然と求める',work:'まだない価値を、最初に形にする力がある',rel:'広く浅くより、少数と深くつながることで力が出る',
-  a1:'ふと浮かんだ感覚を、消さずにすぐ書き留める',a2:'「孤独だな」と感じたら、信頼できる人にそのまま話す',a3:'静かな時間に、「次に始めたいこと」をイメージする'
+  zureTitle:'なぜ、伝わらないと感じるのか',z1:'言語化のタイミング',z2:'感覚の深さ',z3:'理解のスピード'
 },
 'アメノウズメ':{
   theme:'「閉じた流れをひらき、光を呼ぶ神」',
@@ -161,7 +173,7 @@ const GOD_DATA={
   caution:'人に合わせるのが上手なぶん、いつの間にか自分の気持ちを後回しにしていることがあります。「私はどうしたいんだろう」と気づいた時は、少しだけ立ち止まっていい。あなた自身の感覚も、同じくらい大切です。',
   mission:'人や場に「ひらく」きっかけをもたらすこと。あなたの明るさが、次の流れをつくります。',
   love:'自然体でいられる相手と、温かい縁を育てる',work:'人をつなぎ、場の空気を変える力がある',rel:'広いご縁を、自然に引き寄せる',
-  a1:'気になる人に、気軽に声をかけてみる',a2:'「合わせすぎているな」と感じたら、自分の本音を確認する',a3:'純粋に楽しいと感じることを、意識的に増やす'
+  zureTitle:'なぜ、空気を読みすぎてしまうのか',z1:'場の読み方',z2:'感情の受け取り方',z3:'表現のタイミング'
 },
 'アマテラス':{
   theme:'「人を照らし、希望を示す神」',
@@ -169,7 +181,7 @@ const GOD_DATA={
   caution:'「期待に応えなければ」と、いつの間にか無理を重ねていることがあります。輝こうとしすぎなくていい。光を休ませる時間も、あなたには必要です。そういう時期もあります。大丈夫。',
   mission:'自分の光を惜しまず使い、周囲に希望と方向性を示すこと。',
   love:'輝きで人を惹きつけるが、対等な関係を大切に',work:'リーダー・発信・教育の場で才能が輝く',rel:'自然と人が集まるが、甘えられすぎには注意',
-  a1:'「楽しい」と感じることを、素直に表現してみる',a2:'無理をしていると気づいたら、一度立ち止まっていい',a3:'誰かに希望を伝える言葉を、今日一言だけ言ってみる'
+  zureTitle:'なぜ、一人で抱えてしまうのか',z1:'期待値の高さ',z2:'見えている景色の広さ',z3:'感じる責任感の重さ'
 },
 'ツクヨミ':{
   theme:'「静けさの中で本質を見抜く神」',
@@ -177,7 +189,7 @@ const GOD_DATA={
   caution:'判断を急ぎすぎると、本来の力が出にくくなります。「いったん待つ」という選択が、流れを整えることがあります。焦らなくていい。あなたのペースで、大丈夫です。',
   mission:'静かな気づきを周囲に届けること。あなたの洞察が、誰かの道を照らします。',
   love:'深く通じ合える相手と、静かな絆を育てる',work:'本質を見抜く力が、分析・研究・思考の場で活きる',rel:'少数と深くつながることで、本来の力が出る',
-  a1:'感じたことを、ノートに書き出してみる',a2:'答えを急がず、少し待ってみる',a3:'一人の静かな時間を、意識的につくる'
+  zureTitle:'なぜ、言葉にするのが難しいのか',z1:'洞察の深さ',z2:'言葉にするまでの時間',z3:'内側で処理する速さ'
 },
 'フツヌシ':{
   theme:'「迷いを断ち、流れを切り替える神」',
@@ -185,7 +197,7 @@ const GOD_DATA={
   caution:'白黒つけすぎて、周囲との関係が難しくなることがあります。「グレーのまま置いておく」という選択も、時には必要です。全部決めなくていい。そういう時期もあります。',
   mission:'流れを切り替え、次の方向性を定めること。あなたの決断が、周囲を動かします。',
   love:'はっきりした関係を好む、誠実な愛し方',work:'決断・改革・新しい方向を定める場に強い',rel:'明確な関係を好む、少数精鋭タイプ',
-  a1:'迷ったら「どちらが本音か」だけを考える',a2:'決めたことを、小さくでも形にしてみる',a3:'「グレーでいい」と思える場面を、一つ見つけてみる'
+  zureTitle:'なぜ、わかり合えないと感じるのか',z1:'決断のスピード',z2:'白黒のつけ方',z3:'切り替えの早さ'
 },
 'イザナギ':{
   theme:'「現実に新しい世界を創り出す神」',
@@ -193,7 +205,7 @@ const GOD_DATA={
   caution:'一人で全部抱えようとすることがあります。でも、全部を一人でやる必要はありません。誰かに任せることで、あなたはもっと遠くへ行けます。',
   mission:'現実に新しい基盤を築くこと。あなたの行動が、次の流れをつくります。',
   love:'真剣に向き合う、誠実な愛し方',work:'立ち上げ・創造・基盤づくりに強い',rel:'信頼できる少数と、深くつながる',
-  a1:'今取り組んでいることの「次の一歩」を一つ決める',a2:'誰かに頼める部分を、意識的に手放してみる',a3:'形にしたいことを、紙に書き出してみる'
+  zureTitle:'なぜ、ひとりで突き進んでしまうのか',z1:'動くスピード',z2:'決断の早さ',z3:'周囲との温度差'
 },
 'イザナミ':{
   theme:'「深く受けとめ、命の土台となる神」',
@@ -201,7 +213,7 @@ const GOD_DATA={
   caution:'抱えすぎて、自分が疲れていることに気づかないことがあります。少し手放してみてください。手放すことは、逃げることではありません。あなた自身も、大切にしていい。',
   mission:'人や場の根を支えること。あなたの深い受容力が、周囲の安心につながります。',
   love:'深く受けとめる、包み込むような愛し方',work:'サポート・ケア・土台づくりの場に向いている',rel:'信頼を積み重ねる、深いつながりを育てる',
-  a1:'「抱えすぎているな」と感じたら、一つだけ手放す',a2:'自分の気持ちを、誰かに話してみる',a3:'自分を労わる時間を、意識的につくる'
+  zureTitle:'なぜ、抱えすぎてしまうのか',z1:'受け取る深さ',z2:'抱えるものの重さ',z3:'感じる責任の範囲'
 },
 'オオヤマツミ':{
   theme:'「揺るがぬ強さで大地を支える神」',
@@ -209,7 +221,7 @@ const GOD_DATA={
   caution:'慎重になりすぎて、なかなか動き出せないことがあります。「小さくていい」と思って、まず一歩だけ踏み出してみてください。完璧じゃなくていい。始めることに意味があります。',
   mission:'長く支え、揺るがぬ基盤をつくること。あなたの強さが、周囲の支えになります。',
   love:'ゆっくり深まる、長く続く愛し方',work:'継続・安定・長期的な積み上げに強い',rel:'少数と深く、長いつながりを大切に',
-  a1:'「小さくていい」と思って、まず一歩踏み出す',a2:'積み上げてきたことを、改めて振り返ってみる',a3:'今の流れを続けることの価値を、自分に確認する'
+  zureTitle:'なぜ、動き出せないと感じるのか',z1:'積み上げのペース',z2:'慎重さの度合い',z3:'変化への向き合い方'
 },
 'ヒメコトシリ':{
   theme:'「実りと豊かさを育てる神」',
@@ -217,7 +229,7 @@ const GOD_DATA={
   caution:'結果を急ぎすぎると、疲れやすくなります。土の中でゆっくり育つ時間も、大切な力の一部です。焦らなくていい。そういう時期もあります。',
   mission:'豊かさを育て、周囲に循環させること。あなたの丁寧さが、実りをもたらします。',
   love:'丁寧に育てる、深まるほど豊かになる愛し方',work:'育成・企画・豊かさを広げる場に向いている',rel:'時間をかけて深まる、丁寧なつながりを大切に',
-  a1:'今育てていることを、一つ確認してみる',a2:'結果を急がず、プロセスを楽しんでみる',a3:'豊かさを感じる場面を、一つ書き出してみる'
+  zureTitle:'なぜ、結果が出ないと感じるのか',z1:'育てるペース',z2:'結果を見る視点',z3:'豊かさの感じ方'
 },
 'ミヤツヒメ':{
   theme:'「暮らしに根ざした知恵で整える神」',
@@ -225,7 +237,7 @@ const GOD_DATA={
   caution:'人のために動きすぎて、自分の余白がなくなることがあります。「自分のために」何かをする時間を、意識的につくってみてください。あなたを後回しにしなくていい。',
   mission:'暮らしと環境を整え、安心できる場をつくること。',
   love:'日常の中で育つ、穏やかで温かい愛し方',work:'環境整備・サポート・暮らしに関わる場に強い',rel:'身近な人を大切にする、温かいつながりを育てる',
-  a1:'今の環境で、一つだけ整えられることをやってみる',a2:'「自分のために」何かを一つする時間をつくる',a3:'身近な人に、感謝の気持ちを伝えてみる'
+  zureTitle:'なぜ、自分を後回しにしてしまうのか',z1:'整えるペース',z2:'気づく細かさ',z3:'自分を後回しにする度合い'
 },
 'スサノオ':{
   theme:'「激しさを力に変え、道を切りひらく神」',
@@ -233,7 +245,7 @@ const GOD_DATA={
   caution:'力が強いぶん、方向が定まらない時は、ぶつかることが増えます。「なぜいつもこうなるんだろう」と感じた時は、力が大きすぎて行き場を探しているサインです。向かう方向が決まった時、あなたのエネルギーは本来の力を発揮します。そういう時期もあります。大丈夫。',
   mission:'誰も動かない時に、最初に動ける人。閉じていた扉を、あなたの熱が開ける。それが、あなたに与えられた役割です。',
   love:'情熱的で真剣な、一途な愛し方',work:'開拓・突破・新しい挑戦に強い',rel:'本音でぶつかれる、深いつながりを大切に',
-  a1:'エネルギーが高まっている時こそ、方向を一つに絞る',a2:'「今、何に向かっているか」を確認してみる',a3:'信頼できる人に、本音を話してみる'
+  zureTitle:'なぜ、ぶつかってしまうのか',z1:'動くスピード',z2:'熱量の強さ',z3:'周囲との温度差'
 },
 'オオクニヌシ':{
   theme:'「ご縁を結び、人と場を育てる神」',
@@ -241,7 +253,7 @@ const GOD_DATA={
   caution:'軸が曖昧になって、方向性を見失いやすいことがあります。「自分はどうしたいか」を、定期的に確認してみてください。人のために動くことも大切。でも、あなた自身の軸を忘れないで。',
   mission:'ご縁を育て、人と場をつなぐこと。あなたのつながりが、豊かな輪を生みます。',
   love:'ご縁を大切に育てる、温かい愛し方',work:'人をつなぐ・コミュニティ・関係性を育てる場に強い',rel:'広いご縁を育て、深いつながりを大切に',
-  a1:'今のご縁に、感謝の気持ちを伝えてみる',a2:'「自分はどうしたいか」を一つ確認する',a3:'新しいつながりに、一歩踏み出してみる'
+  zureTitle:'なぜ、軸がぶれると感じるのか',z1:'関係性の育て方',z2:'ご縁の感じ方',z3:'つながりの深め方'
 },
 'タケミカヅチ':{
   theme:'「決断と覚悟で物事を動かす神」',
@@ -249,7 +261,7 @@ const GOD_DATA={
   caution:'強く見られすぎて、本当の気持ちを伝えにくいことがあります。「弱さを見せていい」と思うと、もっと楽になれます。強いあなたの中にある、柔らかい部分も、大切にしてください。',
   mission:'方向性を定め、周囲を動かす決断をすること。',
   love:'真剣に向き合う、覚悟のある愛し方',work:'決断・方向性を定める・リーダーシップの場に強い',rel:'信頼できる少数と、深くつながる',
-  a1:'迷っていることを一つ、今日決めてみる',a2:'「弱さを見せていい」と、自分に許可を出す',a3:'決めたことを、小さくても形にしてみる'
+  zureTitle:'なぜ、強く見られすぎてしまうのか',z1:'決断の早さ',z2:'見極めの鋭さ',z3:'覚悟の重さ'
 },
 'ヤマトタケル':{
   theme:'「試練を越えながら成長していく神」',
@@ -257,7 +269,7 @@ const GOD_DATA={
   caution:'頑張りすぎて、自分を追い込みやすいことがあります。「休むことも前進」です。立ち止まることは、諦めることではありません。そういう時期もあります。大丈夫。',
   mission:'経験を力に変え、次の道を切りひらくこと。',
   love:'一緒に成長できる相手と、深まる愛し方',work:'挑戦・成長・困難を越える場に強い',rel:'共に成長できるつながりを大切に',
-  a1:'今の経験から、一つ学びを見つけてみる',a2:'「休むことも前進」と、自分に伝えてみる',a3:'次に挑戦したいことを、一つ書き出してみる'
+  zureTitle:'なぜ、頑張りすぎてしまうのか',z1:'成長のスピード',z2:'試練の受け取り方',z3:'前に進む力の強さ'
 },
 'クシナダヒメ':{
   theme:'「愛とやさしさで人を守る神」',
@@ -265,7 +277,7 @@ const GOD_DATA={
   caution:'自分を抑えすぎて、本当の気持ちを伝えられないことがあります。あなたの気持ちも、同じくらい大切です。「言っていい」と思うと、関係がもっと深まります。',
   mission:'安心できる関係をつくり、愛でつなぐこと。',
   love:'深く守り、寄り添う温かい愛し方',work:'ケア・サポート・人を守る場に向いている',rel:'安心できる深いつながりを大切に',
-  a1:'自分の気持ちを、一つ正直に伝えてみる',a2:'自分を大切にすることに、罪悪感を持たない',a3:'信頼できる人に、「ありがとう」を伝えてみる'
+  zureTitle:'なぜ、言えないと感じるのか',z1:'感情の受け取り方',z2:'相手優先の思考',z3:'自己表現の抑制'
 },
 'コノハナサクヤヒメ':{
   theme:'「華やかさと生命力で人を惹きつける神」',
@@ -273,7 +285,7 @@ const GOD_DATA={
   caution:'評価を気にしすぎて、本来の自分を見失いやすいことがあります。「自分らしさ」に戻ることが、一番の開運です。評価されなくていい。あなたはそのままで、十分輝いています。',
   mission:'喜びと希望を届け、周囲を明るくすること。',
   love:'自然な魅力で惹きつける、華やかな愛し方',work:'表現・発信・魅力を伝える場に強い',rel:'自然体でいられるつながりを大切に',
-  a1:'「自分らしい」と感じることを、一つ表現してみる',a2:'評価を気にせず、好きなことをやってみる',a3:'自分の魅力を、素直に受け取ってみる'
+  zureTitle:'なぜ、評価が気になってしまうのか',z1:'魅力の出し方',z2:'評価への敏感さ',z3:'自分らしさの表現'
 }
 };
 
@@ -313,9 +325,10 @@ function calc(){
   document.getElementById('r-love').textContent=d.love;
   document.getElementById('r-work').textContent=d.work;
   document.getElementById('r-rel').textContent=d.rel;
-  document.getElementById('r-a1').textContent=d.a1;
-  document.getElementById('r-a2').textContent=d.a2;
-  document.getElementById('r-a3').textContent=d.a3;
+  document.getElementById('r-zure-title').textContent=d.zureTitle;
+  document.getElementById('r-z1').textContent=d.z1;
+  document.getElementById('r-z2').textContent=d.z2;
+  document.getElementById('r-z3').textContent=d.z3;
   document.getElementById('result').style.display='block';
   document.getElementById('input-card').style.display='none';
   window.scrollTo(0,0);
@@ -323,7 +336,7 @@ function calc(){
 
 function copyText(){
   const g=id=>document.getElementById(id).textContent;
-  const txt=`✦ ${g('r-god')} 天命タイプ ✦\n${g('r-theme')}\n\n【魂の設計】\n基本タイプ：${g('r-base')}　魂の軸：${g('r-axis')}　魂の個性：${g('r-24')}\n\n【授かった力】\n${g('r-strength')}\n\n【そっと知っておきたいこと】\n${g('r-caution')}\n\n【魂の役割】\n${g('r-mission')}\n\n💕 恋愛｜${g('r-love')}\n💼 仕事｜${g('r-work')}\n👥 人間関係｜${g('r-rel')}\n\n【あなたの力を引き出す3つのこと】\n① ${g('r-a1')}\n② ${g('r-a2')}\n③ ${g('r-a3')}\n\n━━━━━━━━━━━━\nもっと深く知りたい方へ → 詳細鑑定（有料）\n全16ページ・8,500文字以上のボリュームで\n恋愛・仕事・人間関係・運気の流れを、あなただけに読み解きます\n━━━━━━━━━━━━`;
+  const txt=`✦ ${g('r-god')} 天命タイプ ✦\n${g('r-theme')}\n\n【魂の設計】\n基本タイプ：${g('r-base')}　魂の軸：${g('r-axis')}　魂の個性：${g('r-24')}\n\n【授かった力】\n${g('r-strength')}\n\n【そっと知っておきたいこと】\n${g('r-caution')}\n\n【魂の役割】\n${g('r-mission')}\n\n💕 恋愛｜${g('r-love')}\n💼 仕事｜${g('r-work')}\n👥 人間関係｜${g('r-rel')}\n\n${g('r-zure-title')}\n\nあなたが感じていた「なぜか伝わらない」という感覚は、あなたのせいではありません。\nこのタイプは、次の3つのズレを持っています。\n\n・${g('r-z1')}\n・${g('r-z2')}\n・${g('r-z3')}\n\nこのズレが、人との距離感や理解の差を生みます。\n\n続きはこちらから\nhttps://kunkun3793-dev.github.io/tenmeihassho/sample.html\n\n━━━━━━━━━━━━\nもっと深く知りたい方へ → 詳細鑑定（有料）\n全16ページ・8,500文字以上のボリュームで\n恋愛・仕事・人間関係・運気の流れを、あなただけに読み解きます\n━━━━━━━━━━━━`;
   navigator.clipboard.writeText(txt).then(()=>{
     document.getElementById('copied').style.display='block';
     setTimeout(()=>document.getElementById('copied').style.display='none',3000);
